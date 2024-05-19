@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of MA Public Schoolsß</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .dashboard-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .dashboard-container iframe,
+        .tableauPlaceholder {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #26415e;
+            color: white;
+            margin: 0;
+        }
+        .dashboard-title {
+            text-align: center;
+            padding: 10px;
+            background-color: #354454;
+            color: white;
+            margin: 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .main {
+            height: 80vh;
+            width: 100%;
+        }
+
+        .bell {
+            position: absolute;
+            width: 80px;
+            height: auto;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .speaker {
+            position: absolute;
+            z-index: 9999; 
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+        }
+
+        .larger {
+      font-family: impact;
+      font-size: 30px;
+    }
+
+
+
+    #annotation {
+      position: absolute;
+      z-index: 9999; 
+      margin-left: 130px;
+      margin-top: -500px;
+      animation: bounce 2s infinite;
+    }
+
+    </style>
+</head>
+<body>
+
+    <audio id="bellSound" src="bell.mp3"></audio>
+
+    <h1>🎒Visualizing Education: An Exploration of Massachusetts Schools</h1>
+
+
+    <div>
+          <img class='main' src='1.jpg' >
+    </div>
+
+    <div>
+        <img class='bell' src='bell.png' style='height:100px; margin-left:60px; margin-top: 80px;' onclick="playBellSound()">
+
+    </div>
+
+    <div>
+        <img class='speaker' src='speaker.png' style='position: absolute; height:100px; margin-left:1250px; margin-top: 2600px;' onclick="playVoiceSound()">
+    </div>
+
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Comprehensive Overview: Total Number of Schools, Enrollment, and Classes</h2>
+        <div class='tableauPlaceholder' id='viz1716149550591' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MassPublicSchoolsViz&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1716149550591');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Class Size Analysis with Gender Ratio Insights</h2>
+        <div class='tableauPlaceholder' id='viz1716143806797' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MassPublicSchoolsViz&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1716143806797');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Detailed Enrollment Demographics Breakdown</h2>
+        <div class='tableauPlaceholder' id='viz1716143874040' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MassPublicSchoolsViz&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1716143874040');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Economic Disadvantage and College Attendance: Student Insights</h2>
+        <div class='tableauPlaceholder' id='viz1716136301572' style='position: relative'><noscript><a href='#'><img alt='Dashboard 4 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MassPublicSchoolsViz&#47;Dashboard4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1716136301572');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Graduation Rates Plummet Below 30% in Schools Lacking Resources for Economically Disadvantaged and High-Needs Students</h2>
+        <div class='tableauPlaceholder' id='viz1716136497990' style='position: relative'><noscript><a href='#'><img alt='Dashboard 5 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MassPublicSchoolsViz&#47;Dashboard5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MassPublicSchoolsViz&#47;Dashboard5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1716136497990');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    <div id='annotation' class='larger slide-in' style='position: absolute; margin-left: 160px; margin-top: 50px;'> Despite being from 2017, the data offers valuable insights that remain relevant today. <br>The main columns that formed the core of this analysis include:
+        <br>-- % Graduated, % Dropped Out
+        <br>-- School Name
+        <br>-- Average Class Size
+        <br>-- % Attending College
+        <br>-- % of Economically Disadvantaged
+        <br>-- High Needs/Students with Disablities,
+        <br> -- Gender/Race and TOTAL Enrollment.
+    </div>
+
+    <div id="text" class="'small" style='position: absolute; margin-left: 150px; margin-top: 450px;'> Data Source: </div>
+    <a href="https://www.kaggle.com/datasets/ndalziel/massachusetts-public-schools-data/data" target="_blank" style='position: absolute; margin-left: 250px; margin-top: 450px;'>Kaggle!</a>
+
+    <div id="text" class="'small" style='position: absolute; margin-left: 150px; margin-top: 500px;'> Project Documentation: </div>
+    <a href="https://docs.google.com/document/d/1y_UfcvKBoR05qcxcRuHIWIrZ1w-qOQ0ygtLtW_MWAYM/edit?usp=sharing" target="_blank" style='position: absolute; margin-left: 320px; margin-top: 500px;'>Final Submission!</a>
+
+    <div id="text" class="'small" style='position: absolute; margin-left: 500px; margin-top: 600px;'> Credits: CS617 of UMass Boston, Class of 2024, and a big shout out to Prof. Daniel Haehn! </div>
+
+</div>
+
+
+    <script type='text/javascript'>
+
+        function playBellSound() {
+            var audio = new Audio('bell.mp3');
+            audio.play();
+        }
+
+        function playVoiceSound() {
+            var audio = new Audio('chart3.mp3');
+            audio.play();
+        }
+
+        function loadTableauViz(id) {
+            var divElement = document.getElementById(id);
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            loadTableauViz('viz1716149550591');
+            loadTableauViz('viz1716143806797');
+            loadTableauViz('viz1716143874040');
+            loadTableauViz('viz1716136301572');
+            loadTableauViz('viz1716136497990');
+        });
+    </script>
+</body>
+</html>
+
+
+
